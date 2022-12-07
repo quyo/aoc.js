@@ -1,0 +1,7 @@
+.direnv/
+.git/
+.husky/
+dist/
+node_modules/
+result/
+**/*.ejs

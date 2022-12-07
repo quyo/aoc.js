@@ -1,0 +1,48 @@
+[devshell]
+name = "node nest project devshell"
+packages = [ "node-nest-project-devenv" ]
+
+
+[[commands]]
+command = "pushd \"${PRJ_ROOT}\" ; code . ; popd"
+name = "edit"
+help = "launch vscode with debugging configuration."
+category = "1. code"
+
+[[commands]]
+command = "pushd \"${PRJ_ROOT}\" ; npm run lint ; popd"
+name = "lint"
+help = "run eslint & stylelint."
+category = "1. code"
+
+[[commands]]
+command = "pushd \"${PRJ_ROOT}\" ; npm run prettify ; popd"
+name = "prettify"
+help = "run prettier."
+category = "1. code"
+
+
+[[commands]]
+command = "pushd \"${PRJ_ROOT}\" ; npm run dev ; popd"
+name = "dev"
+help = "build. serve. watch.     (process.env[\"NODE_ENV\"] === \"development\")"
+category = "2. build"
+
+[[commands]]
+command = "pushd \"${PRJ_ROOT}\" ; npm run prod ; popd"
+name = "prod"
+help = "build. serve.            (process.env[\"NODE_ENV\"] === \"production\")"
+category = "2. build"
+
+
+[[commands]]
+command = "pushd \"${PRJ_ROOT}\" ; docker-compose build ; popd"
+name = "cbuild"
+help = "build docker image."
+category = "3. deploy"
+
+[[commands]]
+command = "pushd \"${PRJ_ROOT}\" ; docker-compose up ; popd"
+name = "crun"
+help = "run docker container."
+category = "3. deploy"

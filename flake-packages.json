@@ -1,0 +1,14 @@
+{
+  "nixpkgs-stable": [
+    "binutils",
+    "docker-compose",
+    "fd",
+    "gcc",
+    "gnugrep",
+    "gnumake",
+    "gnused",
+    "python3"
+  ],
+  "nixpkgs-unstable": ["nodejs-18_x"],
+  "self": []
+}
