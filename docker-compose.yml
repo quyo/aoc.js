@@ -1,15 +1,14 @@
 version: "3"
 services:
-  node-nest-project:
+
+  aoc:
     build: .
-    container_name: node-nest-project
-    image: quyo/node-nest-project:latest
+    container_name: aoc
+    image: quyo/aoc.js:latest
     restart: "no"
     networks:
       - external
-    ports:
-      - 3000:3000
 
 networks:
   external:
-    name: node-nest-project_external
+    name: aoc_external
