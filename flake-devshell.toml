@@ -1,6 +1,6 @@
 [devshell]
-name = "node nest project devshell"
-packages = [ "node-nest-project-devenv" ]
+name = "aoc.js devshell"
+packages = [ "aoc-devenv" ]
 
 
 [[commands]]
