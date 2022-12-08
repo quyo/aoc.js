@@ -6,6 +6,8 @@ services:
     container_name: aoc
     image: quyo/aoc.js:latest
     restart: "no"
+    ports:
+      - 3000:3000
     networks:
       - external
 
