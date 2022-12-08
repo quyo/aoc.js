@@ -23,6 +23,7 @@ RUN npm install --omit=dev husky
 
 COPY --from=build-stage /app/config ./config
 COPY --from=build-stage /app/dist ./dist
+COPY --from=build-stage /app/input ./input
 
 CMD ["npm", "run", "serve:prod"]
 

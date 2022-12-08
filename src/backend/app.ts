@@ -2,23 +2,19 @@ import config from "config";
 import { NestFactory } from "@nestjs/core";
 import type { NestExpressApplication } from "@nestjs/platform-express";
 import path from "path";
-import url from "url";
 
 import { AppModule } from "./app.module";
-
-const __filename = url.fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 const port: number = config.get("backend.server.port");
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
-  app.useStaticAssets(path.join(__dirname, "../../dist/frontend/public"), {
+  app.useStaticAssets(path.join(process.cwd(), "dist/frontend/public"), {
     prefix: "/",
     extensions: ["html", "htm"],
   });
-  app.setBaseViewsDir(path.join(__dirname, "../../dist/frontend/views"));
+  app.setBaseViewsDir(path.join(process.cwd(), "dist/frontend/views"));
   app.setViewEngine("ejs");
 
   await app.listen(port);
