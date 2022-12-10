@@ -12,8 +12,8 @@ const __dirname = path.dirname(__filename);
 const src = path.resolve(__dirname, "src/frontend/public");
 
 const entryPoints = {
-  "css/bundle": [`${src}/css/global`, `${src}/css/bootstrap`],
-  "js/bundle": [`${src}/js/app`, `${src}/js/bootstrap`],
+  "css/bundle": [`${src}/css/global`, `${src}/ext/bootstrap/css/bootstrap`],
+  "js/bundle": [`${src}/js/app`, `${src}/ext/bootstrap/js/bootstrap`],
   // "other output points" : ["other entry point"]
 };
 
