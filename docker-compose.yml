@@ -1,6 +1,5 @@
 version: "3"
 services:
-
   aoc:
     build: .
     container_name: aoc
