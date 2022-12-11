@@ -1,8 +1,8 @@
 // Bootstrap demo
 
-import { Popover } from "bootstrap";
+//import { Popover } from "bootstrap";
 
-new Popover(document.getElementById("popoverButton") ?? "");
+//new Popover(document.getElementById("popoverButton") ?? "");
 
 // jQuery demo
 
@@ -12,9 +12,9 @@ import jQuery from "jquery";
 (<any>window).jQuery = jQuery;
 /* eslint-enable */
 
-jQuery(function () {
-  $("p").text("The DOM is now loaded and can be manipulated.");
-});
+//jQuery(function () {
+//  $("p").text("The DOM is now loaded and can be manipulated.");
+//});
 
 // NODE_ENV demo
 
