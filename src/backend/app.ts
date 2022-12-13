@@ -23,13 +23,14 @@ await bootstrap();
 
 const env = process.env["NODE_ENV"] || "<undefined>";
 const label = config.get<string>("env.labelOutput");
+const url = config.get<string>("backend.server.fullUrl");
 
 console.log(
   "###########################################################################################################"
 );
 console.log("#");
 console.log("#");
-console.log(`#     SERVER RUNNING ON http://localhost:${port}`);
+console.log(`#     SERVER RUNNING ON ${url}`);
 console.log("#");
 console.log(`#         process.env["NODE_ENV"] = ${env}`);
 console.log(`#         config.env.label = ${label}`);

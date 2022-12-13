@@ -93,7 +93,7 @@ export default (
     // The location where bundle are stored
     output: {
       path: path.resolve(__dirname, "dist/frontend/public"),
-      publicPath: process.env["WEBPACK_OUTPUT_PUBLIC_PATH"] || "/",
+      publicPath: process.env["AOCJS_WEBPACK_OUTPUT_PUBLIC_PATH"] || "/",
       filename: "[name].[contenthash].js",
       chunkFilename: "chunk/[id].[contenthash].js",
     },
