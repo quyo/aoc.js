@@ -1,8 +1,8 @@
 version: "3"
 services:
-  aoc:
+  aoc-js:
     build: .
-    container_name: aoc
+    container_name: aoc-js
     image: quyo/aoc.js:latest
     restart: "no"
     ports:
@@ -12,4 +12,4 @@ services:
 
 networks:
   external:
-    name: aoc_external
+    name: aoc-js_external

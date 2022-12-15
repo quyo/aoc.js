@@ -28,5 +28,5 @@ let
 in
 
 {
-  aoc-devenv = devenv ./flake-packages.json "aoc.js-devenv";
+  aoc-js-devenv = devenv ./flake-packages.json "aoc-js-devenv";
 }

@@ -27,8 +27,8 @@
       in
       {
         packages = rec {
-          aoc-devenv = pkgs.aoc-devenv;
-          default = aoc-devenv;
+          aoc-js-devenv = pkgs.aoc-js-devenv;
+          default = aoc-js-devenv;
         };
 
         devShells = {

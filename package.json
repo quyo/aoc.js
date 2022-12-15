@@ -1,5 +1,5 @@
 {
-  "name": "aoc",
+  "name": "aoc.js",
   "version": "1.0.0",
   "description": "",
   "main": "./src/backend/app.ts",
