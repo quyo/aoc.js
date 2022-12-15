@@ -1,7 +1,7 @@
 system: self: final: prev:
 
 let
-  devenv = file: name:
+  buildenv = file: name:
     let
       inherit (builtins) attrNames concatMap getAttr;
       inherit (final) buildEnv;
@@ -28,5 +28,6 @@ let
 in
 
 {
-  aoc-js-devenv = devenv ./flake-packages.json "aoc-js-devenv";
+  devenv = buildenv ./flake-packages-devenv.json "devenv";
+  runtime = buildenv ./flake-packages-runtime.json "runtime";
 }

@@ -3,7 +3,7 @@ services:
   aoc-js:
     build: .
     container_name: aoc-js
-    image: quyo/aoc.js:latest
+    image: quyo/aoc.js:dev
     restart: "no"
     ports:
       - 3000:3000
