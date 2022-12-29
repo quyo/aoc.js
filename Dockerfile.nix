@@ -7,13 +7,13 @@ WORKDIR /app
 COPY flake* .
 
 COPY package*.json .
-RUN nix shell .#devenv -c npm install
+RUN nix shell .#flake-devenv -c npm install
 
 COPY . .
-RUN nix shell .#devenv -c npm run build:prod
+RUN nix shell .#flake-devenv -c npm run build:prod
 
 RUN rm -rf ./node_modules
-RUN nix shell .#devenv -c npm install --omit=dev husky
+RUN nix shell .#flake-devenv -c npm install --omit=dev husky
 
 
 
@@ -25,7 +25,7 @@ WORKDIR /app
 
 COPY flake* .
 
-RUN nix profile install .#runtime && nix-collect-garbage -d
+RUN nix profile install .#flake-runtime && nix-collect-garbage -d
 
 COPY --from=build-stage /app/package*.json .
 COPY --from=build-stage /app/config ./config
